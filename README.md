@@ -12,3 +12,4 @@
 - mainscreen.html: added link to about.html on line 21
 - about.html: added link to mainscreen.html on line 20
 - MainScreenControllerr: added GetMapping for about.html on line 56
+- about.html: added content in lines 23-42
