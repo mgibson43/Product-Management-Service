@@ -9,6 +9,6 @@
 
 ### Task D
 - about.html: created file
-- mainscreen.html: added link to about.html on line 20
-- about.html: added link to mainscreen.html on line 19
+- mainscreen.html: added link to about.html on line 21
+- about.html: added link to mainscreen.html on line 20
 - MainScreenControllerr: added GetMapping for about.html on line 56
