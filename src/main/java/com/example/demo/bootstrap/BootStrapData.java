@@ -1,8 +1,10 @@
 package com.example.demo.bootstrap;
 
+import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
+import com.example.demo.repositories.InhousePartRepository;
 import com.example.demo.repositories.OutsourcedPartRepository;
 import com.example.demo.repositories.PartRepository;
 import com.example.demo.repositories.ProductRepository;
@@ -30,42 +32,89 @@ public class BootStrapData implements CommandLineRunner {
 
     private final OutsourcedPartRepository outsourcedPartRepository;
 
-    public BootStrapData(PartRepository partRepository, ProductRepository productRepository, OutsourcedPartRepository outsourcedPartRepository) {
+    private final InhousePartRepository inhousePartRepository;
+
+    public BootStrapData(PartRepository partRepository, ProductRepository productRepository, OutsourcedPartRepository outsourcedPartRepository, InhousePartRepository inhousePartRepository) {
         this.partRepository = partRepository;
         this.productRepository = productRepository;
         this.outsourcedPartRepository=outsourcedPartRepository;
+        this.inhousePartRepository = inhousePartRepository;
     }
 
     @Override
     public void run(String... args) throws Exception {
 
-       /*
-        OutsourcedPart o= new OutsourcedPart();
-        o.setCompanyName("Western Governors University");
-        o.setName("out test");
-        o.setInv(5);
-        o.setPrice(20.0);
-        o.setId(100L);
-        outsourcedPartRepository.save(o);
-        OutsourcedPart thePart=null;
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            if(part.getName().equals("out test"))thePart=part;
+
+        OutsourcedPart whiteKeys = new OutsourcedPart();
+        whiteKeys.setCompanyName("Ivory Inc.");
+        whiteKeys.setName("White Keys");
+        whiteKeys.setInv(10000);
+        whiteKeys.setPrice(5.0);
+        whiteKeys.setId(100L);
+
+        OutsourcedPart blackKeys = new OutsourcedPart();
+        blackKeys.setCompanyName("Ivory Inc.");
+        blackKeys.setName("Black Keys");
+        blackKeys.setInv(10000);
+        blackKeys.setPrice(5.0);
+        blackKeys.setId(101L);
+
+        OutsourcedPart headPhones = new OutsourcedPart();
+        headPhones.setCompanyName("Audio Warehouse");
+        headPhones.setName("Over-the-ear Headphones");
+        headPhones.setInv(20);
+        headPhones.setPrice(75.0);
+        headPhones.setId(102L);
+
+        InhousePart bench = new InhousePart();
+        bench.setName("Bench");
+        bench.setInv(20);
+        bench.setPrice(50.0);
+        bench.setId(103L);
+
+        InhousePart musicStand = new InhousePart();
+        musicStand.setName("Music Stand");
+        musicStand.setInv(100);
+        musicStand.setPrice(20.0);
+        musicStand.setId(104L);
+
+        if (outsourcedPartRepository.count() == 0) {
+            outsourcedPartRepository.save(whiteKeys);
+            outsourcedPartRepository.save(blackKeys);
+            outsourcedPartRepository.save(headPhones);
         }
 
-        System.out.println(thePart.getCompanyName());
-        */
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            System.out.println(part.getName()+" "+part.getCompanyName());
+        if (inhousePartRepository.count() == 0) {
+            inhousePartRepository.save(bench);
+            inhousePartRepository.save(musicStand);
         }
 
-        /*
-        Product bicycle= new Product("bicycle",100.0,15);
-        Product unicycle= new Product("unicycle",100.0,15);
-        productRepository.save(bicycle);
-        productRepository.save(unicycle);
-        */
+//        OutsourcedPart thePart=null;
+//        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
+//        for(OutsourcedPart part:outsourcedParts){
+//            if(part.getName().equals("White Keys"))thePart=part;
+//        }
+
+//        System.out.println(thePart.getCompanyName());
+
+//        outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
+//        for(OutsourcedPart part:outsourcedParts){
+//            System.out.println(part.getName()+" "+part.getCompanyName());
+//        }
+
+        Product grand = new Product("Grand",15000.0,5);
+        Product digital = new Product("Digital",500.0,25);
+        Product spinet = new Product("Spinet",1500.0,20);
+        Product upright = new Product("Upright", 6000.0, 15);
+        Product babyGrand = new Product("Baby Grand", 10000.0, 10);
+
+        if (productRepository.count() == 0) {
+            productRepository.save(babyGrand);
+            productRepository.save(grand);
+            productRepository.save(digital);
+            productRepository.save(spinet);
+            productRepository.save(upright);
+        }
 
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Products"+productRepository.count());

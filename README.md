@@ -13,3 +13,7 @@
 - about.html: added link to mainscreen.html on line 20
 - MainScreenControllerr: added GetMapping for about.html on line 56
 - about.html: added content in lines 23-42
+
+### Task E
+- BootStrapData.java: added products on lines 105-117
+- BootStrapData.java: added parts on lines 48-85
