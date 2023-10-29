@@ -9,11 +9,27 @@
 
 ### Task D
 - about.html: created file
-- mainscreen.html: added link to about.html on line 21
 - about.html: added link to mainscreen.html on line 20
-- MainScreenControllerr: added GetMapping for about.html on line 56
 - about.html: added content in lines 23-42
+<br><br>
+- mainscreen.html: added link to about.html on line 21
+<br><br>
+- MainScreenControllerr: added GetMapping for about.html on line 56
+
 
 ### Task E
 - BootStrapData.java: added products on lines 105-117
 - BootStrapData.java: added parts on lines 48-85
+
+### Task F
+- mainscreen.html: added post form to submit purchase data on lines 88-91
+- mainscreen.html: added margin-top class to div on line 18
+<br><br>
+- BuyProductController.java: created controller class to handle database transactions
+- BuyProductController.java: added content/post mapping for product purchases on lines 18-51
+<br><br>
+- confirmationbuysuccess.html: created html page to handle successful purchases
+- confirmationbuysuccess.html: added html content on lines 17-28
+  <br><br>
+- confirmationbuyfailure.html: created html page to handle unsuccessful purchases
+- confirmationbuyfailure.html: added html content on lines 17-24
