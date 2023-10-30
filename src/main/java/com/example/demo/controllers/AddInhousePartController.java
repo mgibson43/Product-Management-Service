@@ -41,6 +41,13 @@ public class AddInhousePartController{
         theModel.addAttribute("inhousepart",part);
 
         if (!part.isValidInv()) {
+
+            if (part.getMaxInv() < part.getInv()) {
+                theModel.addAttribute("errorValueGreater", "Value too large");
+            }
+            else {
+                theModel.addAttribute("errorValueLesser", "Value too small");
+            }
             return "InhousePartForm";
         }
 

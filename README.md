@@ -50,10 +50,12 @@
 - OutsourcedPartForm.html: added error messages on lines 24-25
 <br><br>
 - InhousePartForm.html: added input fields for maxInv and minInv on lines 24-28
+- InhousePartForm.html: added error messages on lines 23-24
 <br><br>
 - application.properties: renamed database file to 'java-frameworks-database' on line 6
 <br><br>
 - AddInhousePartController.java: added code to verify inventory is within range on lines 43-45
+- AddInhousePartController.java: added error messages to the model attribute on lines 45-50
 <br><br>
 - OutsourcedPartController.java: added code to verify inventory is within range on lines 44-46
 - OutsorucedPartController.java: added error messages to the model attribute on lines 46-51
