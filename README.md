@@ -47,6 +47,7 @@
 - BootStrapData.java: added maxInv and minInv values for music stand on lines 88-89
 <br><br>
 - OutsourcedPartForm.html: added input fields for maxInv and minInv on lines 25-29
+- OutsourcedPartForm.html: added error messages on lines 24-25
 <br><br>
 - InhousePartForm.html: added input fields for maxInv and minInv on lines 24-28
 <br><br>
@@ -55,3 +56,4 @@
 - AddInhousePartController.java: added code to verify inventory is within range on lines 43-45
 <br><br>
 - OutsourcedPartController.java: added code to verify inventory is within range on lines 44-46
+- OutsorucedPartController.java: added error messages to the model attribute on lines 46-51

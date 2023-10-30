@@ -42,6 +42,14 @@ public class AddOutsourcedPartController {
         theModel.addAttribute("outsourcedpart",part);
 
         if (!part.isValidInv()) {
+
+            if (part.getMaxInv() < part.getInv()) {
+                theModel.addAttribute("errorValueGreater", "Value too large");
+            }
+            else {
+                theModel.addAttribute("errorValueLesser", "Value too small");
+            }
+
             return "OutsourcedPartForm";
         }
 
