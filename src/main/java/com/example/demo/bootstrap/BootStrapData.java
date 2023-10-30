@@ -48,16 +48,20 @@ public class BootStrapData implements CommandLineRunner {
         OutsourcedPart whiteKeys = new OutsourcedPart();
         whiteKeys.setCompanyName("Ivory Inc.");
         whiteKeys.setName("White Keys");
-        whiteKeys.setInv(10000);
+        whiteKeys.setInv(1000);
         whiteKeys.setPrice(5.0);
         whiteKeys.setId(100L);
+        whiteKeys.setMaxInv(1040);
+        whiteKeys.setMinInv(52);
 
         OutsourcedPart blackKeys = new OutsourcedPart();
         blackKeys.setCompanyName("Ivory Inc.");
         blackKeys.setName("Black Keys");
-        blackKeys.setInv(10000);
+        blackKeys.setInv(700);
         blackKeys.setPrice(5.0);
         blackKeys.setId(101L);
+        blackKeys.setMaxInv(720);
+        blackKeys.setMinInv(36);
 
         OutsourcedPart headPhones = new OutsourcedPart();
         headPhones.setCompanyName("Audio Warehouse");
@@ -65,18 +69,25 @@ public class BootStrapData implements CommandLineRunner {
         headPhones.setInv(20);
         headPhones.setPrice(75.0);
         headPhones.setId(102L);
+        headPhones.setMaxInv(20);
+        headPhones.setMinInv(1);
 
         InhousePart bench = new InhousePart();
         bench.setName("Bench");
         bench.setInv(20);
         bench.setPrice(50.0);
         bench.setId(103L);
+        bench.setMaxInv(20);
+        bench.setMinInv(1);
 
         InhousePart musicStand = new InhousePart();
         musicStand.setName("Music Stand");
-        musicStand.setInv(100);
+        musicStand.setInv(20);
         musicStand.setPrice(20.0);
         musicStand.setId(104L);
+        musicStand.setMaxInv(20);
+        musicStand.setMinInv(1);
+
 
         if (outsourcedPartRepository.count() == 0) {
             outsourcedPartRepository.save(whiteKeys);

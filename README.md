@@ -33,3 +33,25 @@
   <br><br>
 - confirmationbuyfailure.html: created html page to handle unsuccessful purchases
 - confirmationbuyfailure.html: added html content on lines 17-24
+
+### Task G
+- Part.java: added fields for maxInv and minInv on lines 31-34
+- Part.java: added constructor containing new fields on lines 57-64
+- Part.java: added setters and getters for maxInv and minInv on lines 106-120
+- Part.java: added method 'isValidInv()' that checks if inventory is between maxInv and minInv on lines 140-142
+<br><br>
+- BootStrapData.java: added maxInv and minInv values for white keys on lines 54-55
+- BootStrapData.java: added maxInv and minInv values for black keys on lines 63-64
+- BootStrapData.java: added maxInv and minInv values for headphones keys on lines 72-73
+- BootStrapData.java: added maxInv and minInv values for bench on lines 80-81
+- BootStrapData.java: added maxInv and minInv values for music stand on lines 88-89
+<br><br>
+- OutsourcedPartForm.html: added input fields for maxInv and minInv on lines 25-29
+<br><br>
+- InhousePartForm.html: added input fields for maxInv and minInv on lines 24-28
+<br><br>
+- application.properties: renamed database file to 'java-frameworks-database' on line 6
+<br><br>
+- AddInhousePartController.java: added code to verify inventory is within range on lines 43-45
+<br><br>
+- OutsourcedPartController.java: added code to verify inventory is within range on lines 44-46
