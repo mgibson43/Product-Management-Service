@@ -72,3 +72,6 @@
 ### Task I
 - PartTest.java: added maximum, minimum, and within range tests for partIn on lines 170-189
 - PartTest.java: added maximum, minimum, and within range tests for partOut on lines 191-220
+
+### Task J
+- DeletePartsValidator.java: removed class due to no usages
