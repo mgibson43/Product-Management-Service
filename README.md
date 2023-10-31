@@ -68,3 +68,7 @@
 - productForm.html: updated css of error message on line 26
 <br><br>
 - EnufPartsValidator.java: added check for part falling below minimum on line 36
+
+### Task I
+- PartTest.java: added maximum, minimum, and within range tests for partIn on lines 170-189
+- PartTest.java: added maximum, minimum, and within range tests for partOut on lines 191-220

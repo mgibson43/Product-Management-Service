@@ -156,4 +156,66 @@ class PartTest {
         partOut.setId(1l);
         assertEquals(partIn.hashCode(),partOut.hashCode());
     }
+
+    @Test
+    void invBelowMinIn() {
+        partIn.setMinInv(5);
+        partIn.setInv(4);
+
+        boolean result = partIn.isValidInv();
+
+        assertEquals(false, result);
+    }
+
+    @Test
+    void invAboveMaxIn() {
+        partIn.setMaxInv(10);
+        partIn.setInv(11);
+
+        boolean result = partIn.isValidInv();
+
+        assertEquals(false, result);
+    }
+
+    @Test
+    void invWithinRangeIn() {
+        partIn.setMaxInv(10);
+        partIn.setMinInv(5);
+        partIn.setInv(7);
+
+        boolean result = partIn.isValidInv();
+
+        assertEquals(true, result);
+    }
+
+    @Test
+    void invBelowMinOut() {
+        partOut.setMinInv(5);
+        partOut.setInv(4);
+
+        boolean result = partOut.isValidInv();
+
+        assertEquals(false, result);
+    }
+
+    @Test
+    void invAboveMaxOut() {
+        partOut.setMaxInv(10);
+        partOut.setInv(11);
+
+        boolean result = partOut.isValidInv();
+
+        assertEquals(false, result);
+    }
+
+    @Test
+    void invWithinRangeOut() {
+        partOut.setMaxInv(10);
+        partOut.setMinInv(5);
+        partOut.setInv(7);
+
+        boolean result = partOut.isValidInv();
+
+        assertEquals(true, result);
+    }
 }
