@@ -57,5 +57,9 @@
 - AddInhousePartController.java: added code to verify inventory is within range on lines 43-45
 - AddInhousePartController.java: added error messages to the model attribute on lines 45-50
 <br><br>
-- OutsourcedPartController.java: added code to verify inventory is within range on lines 44-46
-- OutsorucedPartController.java: added error messages to the model attribute on lines 46-51
+- AddOutsourcedPartController.java: added code to verify inventory is within range on lines 44-46
+- AddOutsorucedPartController.java: added error messages to the model attribute on lines 46-51
+
+### Task H
+- AddOutsourcedPartController.java: updated error messages on lines 47, 50
+- BootStrapData.java: updated default values for White and Black key parts on lines 48-64

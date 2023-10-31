@@ -44,10 +44,10 @@ public class AddOutsourcedPartController {
         if (!part.isValidInv()) {
 
             if (part.getMaxInv() < part.getInv()) {
-                theModel.addAttribute("errorValueGreater", "Value too large");
+                theModel.addAttribute("errorValueGreater", "Inventory is greater than the maximum allowed inventory");
             }
             else {
-                theModel.addAttribute("errorValueLesser", "Value too small");
+                theModel.addAttribute("errorValueLesser", "Inventory is less than the minimum allowed inventory");
             }
 
             return "OutsourcedPartForm";
@@ -63,7 +63,4 @@ public class AddOutsourcedPartController {
             repo.save(part);
         return "confirmationaddpart";}
     }
-
-
-
 }

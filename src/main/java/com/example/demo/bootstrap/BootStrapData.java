@@ -48,20 +48,20 @@ public class BootStrapData implements CommandLineRunner {
         OutsourcedPart whiteKeys = new OutsourcedPart();
         whiteKeys.setCompanyName("Ivory Inc.");
         whiteKeys.setName("White Keys");
-        whiteKeys.setInv(1000);
-        whiteKeys.setPrice(5.0);
+        whiteKeys.setInv(20);
+        whiteKeys.setPrice(100.0);
         whiteKeys.setId(100L);
-        whiteKeys.setMaxInv(1040);
-        whiteKeys.setMinInv(52);
+        whiteKeys.setMaxInv(50);
+        whiteKeys.setMinInv(1);
 
         OutsourcedPart blackKeys = new OutsourcedPart();
         blackKeys.setCompanyName("Ivory Inc.");
         blackKeys.setName("Black Keys");
-        blackKeys.setInv(700);
-        blackKeys.setPrice(5.0);
+        blackKeys.setInv(20);
+        blackKeys.setPrice(70.0);
         blackKeys.setId(101L);
-        blackKeys.setMaxInv(720);
-        blackKeys.setMinInv(36);
+        blackKeys.setMaxInv(40);
+        blackKeys.setMinInv(1);
 
         OutsourcedPart headPhones = new OutsourcedPart();
         headPhones.setCompanyName("Audio Warehouse");
