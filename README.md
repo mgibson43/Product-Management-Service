@@ -62,4 +62,9 @@
 
 ### Task H
 - AddOutsourcedPartController.java: updated error messages on lines 47, 50
+<br><br>
 - BootStrapData.java: updated default values for White and Black key parts on lines 48-64
+<br><br>
+- productForm.html: updated css of error message on line 26
+<br><br>
+- EnufPartsValidator.java: added check for part falling below minimum on line 36
